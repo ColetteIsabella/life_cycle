@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 feature "Editing Fellows" do
-  before do
+  #before do
     Factory(:fellow, name: "New Guy")
-    visit '/'
-    click_link "New Guy"
+    visit '/fellows'
+
+    click_link "Follower"
     click_link "Edit Fellow"
   end
 

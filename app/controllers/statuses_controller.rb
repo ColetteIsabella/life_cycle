@@ -1,4 +1,5 @@
 class StatusesController < ApplicationController
+
   before_filter :find_status, :only => [:show, :edit, :update, :destroy]
   def index
     @statuses = Status.all

@@ -1,18 +1,22 @@
 <%= form_for(@fellowstatus) do |f| %>
   <%= f.error_messages %>
 
-
-
   <div class="field">
     <%= f.label :fellow %>
-    <%= f.collection_select :fellow_id, Fellow.find(:all),
-                            :id, :name, prompt: "Choose a Fellow!" %> <br>
+    <%= f.collection_select :fellow_id,
+      Fellow.find(:all),
+                  :id,
+                  :name,
+                  prompt: "Choose a Fellow!" %> <br>
   </div>
 
   <div class="field">
     <%= f.label :status %>
-    <%= f.collection_select :status_id, Status.find(:all),
-                            :id, :name, prompt: "Set a Status!" %> <br>
+    <%= f.collection_select :status_id,
+      Status.find(:all),
+                  :id,
+                  :name,
+                  prompt: "Set a Status!" %> <br>
   </div>
 
 

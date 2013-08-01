@@ -1,4 +1,5 @@
 class FellowsController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_fellow, :only => [:show,
                                        :edit,
                                        :update,

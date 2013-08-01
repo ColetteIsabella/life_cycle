@@ -1,16 +1,18 @@
 <% title(@fellow.name, "Fellows") %>
+
 <h2><%= @fellow.name %></h2>
 <h3>Fellow Information:</h3>
 
 <table>
   <tr>
+
     <th>Email</th>
     <th>Twitter Handle</th>
     <th>Facebook</th>
     <th>LinkedIn</th>
     <th>Notes</th>
   </tr>
-
+<div class="hide">
   <tr>
     <td><%= @fellow.email %></td>
     <td><%= @fellow.twitter %></td>
@@ -18,7 +20,7 @@
     <td><%= @fellow.linkedin %></td>
     <td><%= @fellow.notes %></td>
   </tr>
-
+</div>
 </table>
   <br />
   <br />

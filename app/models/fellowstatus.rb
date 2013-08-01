@@ -3,6 +3,7 @@ class Fellowstatus < ActiveRecord::Base
 
   belongs_to :fellow
   belongs_to :status
+  belongs_to :user
 
   #before_save :set_change_time
 

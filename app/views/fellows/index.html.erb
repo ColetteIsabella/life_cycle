@@ -1,7 +1,11 @@
-<%= link_to "New Fellow", new_fellow_path %>
+
+
 <h2>Fellows</h2>
 <ul>
   <% @fellows.each do |fellow| %>
     <li><%= link_to fellow.name, fellow %></li>
 <% end %>
 </ul>
+
+<%= link_to "New Status", new_status_path %><br />
+<%= link_to "New Fellow", new_fellow_path %>

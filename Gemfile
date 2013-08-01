@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 
 gem "dynamic_form", "1.1.4"
 
-gem 'sqlite3'
+  gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -12,9 +12,13 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
   gem 'uglifier', '>= 1.0.3'
-end
+  end
+
+  gem "devise", "2.1.0"
+  gem 'jquery-rails'
+
+
 group :test, :development do
   gem 'rspec-rails', "~> 2.11"
   gem 'launchy'
@@ -23,9 +27,10 @@ end
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl', '2.6.4'
+  gem "email_spec", "1.2.1"
 end
 
-gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

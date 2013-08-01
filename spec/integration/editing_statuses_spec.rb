@@ -1,4 +1,5 @@
 require 'spec_helper'
+
 feature "Editing Statuses" do
   scenario "Updating a status" do
     Factory(:status, :name => "Follower")

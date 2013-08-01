@@ -3,9 +3,10 @@ require 'spec_helper'
 feature 'Creating Fellows' do
 
   before do
-    visit '/'
-    click_link 'New Fellow'
-  end
+    visit '/fellows'
+      click_link 'New Fellow'
+    end
+
 
   scenario "can create a fellow" do
     fill_in 'Name', with: 'New Guy'

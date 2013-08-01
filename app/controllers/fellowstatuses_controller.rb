@@ -1,4 +1,5 @@
 class FellowstatusesController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_fellows_and_statuses
 
   def index
@@ -7,13 +8,14 @@ class FellowstatusesController < ApplicationController
 
 def new
     #@fellow = Fellow.new(params[:fellow])
-    #@fellowstatus = @fellow.fellowstatus.build
     @fellowstatus = Fellowstatus.new
   end
 
   def create
     #@fellow = Fellow.new(params[:fellow])
-    #@fellowstatus = @fellow.fellowstatus.build
+    #@fellowstatus = @status.fellowstatus.build(params[:fellowstatus])
+    #@fellowstatus = @fellow.fellowstatus.build(params[:fellowstatus])
+    #@fellowstatus.user = current_user
     @fellowstatus = Fellowstatus.new(params[:fellowstatus])
     if @fellowstatus.save
       flash[:notice] = "Fellow Status has been created."

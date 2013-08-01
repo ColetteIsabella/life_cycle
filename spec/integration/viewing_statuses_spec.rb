@@ -1,6 +1,7 @@
 require "spec_helper"
 
 feature "Viewing Statuses" do
+
   scenario "Listing all statuses" do
     status = Factory.create(:status, :name => "Follower")
     visit "/statuses"
